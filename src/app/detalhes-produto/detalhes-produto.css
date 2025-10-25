@@ -1,0 +1,88 @@
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1,h2 {
+  text-align: center;
+  color: rgb(147, 15, 15);
+}
+
+.btn-voltar {
+  background:#a30000ef;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.btn-voltar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pesquisa-container {
+  background: rgb(253, 77, 77);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-pesquisa {
+  display: flex;
+  gap: 10px;
+}
+
+.form-pesquisa input {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  flex: 1;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-pesquisa input:focus {
+  border-color: #a30000ef;
+  box-shadow: 0 0 5px rgba(163, 0, 0, 0.5);
+  outline: none;
+}
+
+.form-pesquisa button {
+  background: #a30000ef;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+}
+
+.carregando, .erro {
+  text-align: center;
+  padding: 40px;
+}
+
+.erro {
+  color: red;
+}
+
+.detalhes-produto {
+  background:   rgb(252, 114, 101);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.info-grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.info-item {
+  padding: 10px;
+  background: #a30000ef;
+  border-radius: 3px;
+  color: rgb(245, 191, 156);
+}

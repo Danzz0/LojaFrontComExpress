@@ -1,0 +1,41 @@
+<div class="container">
+  <button class="btn-voltar" (click)="goHome()">Voltar</button>
+
+  <div class="pesquisa-container">
+    <h2>Pesquisar Produto</h2>
+    <div class="form-pesquisa">
+      <input 
+        type="number" 
+        [(ngModel)]="searchId" 
+        placeholder="Digite o ID do produto"
+        min="1">
+      <button (click)="searchById()" [disabled]="!searchId">Pesquisar</button>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="carregando">
+    Carregando...
+  </div>
+
+  <div *ngIf="error" class="erro">
+    {{ error }}
+  </div>
+
+  <div *ngIf="product && !loading" class="detalhes-produto">
+    <h1>{{ product.nome }}</h1>
+    <div class="info-grid">
+      <div class="info-item">
+        <strong>ID:</strong> {{ product.id }}
+      </div>
+      <div class="info-item">
+        <strong>Marca:</strong> {{ product.marca }}
+      </div>
+      <div class="info-item">
+        <strong>Quantidade em Estoque:</strong> {{ product.quantidade }} unidades
+      </div>
+      <div class="info-item">
+        <strong>Preço:</strong> R$ {{ product.preco | number:'1.2-2' }}
+      </div>
+    </div>
+  </div>
+</div>
